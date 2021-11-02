@@ -1,15 +1,17 @@
 import static org.junit.Assert.*;
 
+import org.junit.Test;
+
 public class SorterTest {
 
-    @org.junit.Test
+    @Test
     public void sortStringsValidityTest1() {
         String[] arr = {"cc", "aa", "bb", "ad", "de", "dc"};
         String[] expectedArr = {"aa", "ad", "bb", "cc", "dc", "de"};
         Sorter.sortStrings(arr);
         assertArrayEquals(expectedArr, arr);
     }
-    @org.junit.Test
+    @Test
     public void sortStringsValidityTest2() {
         String[] arr = {"Mozart", "Beethoven", "Bach"};
         String[] expectedArr = {"Bach", "Beethoven", "Mozart"};
@@ -18,7 +20,7 @@ public class SorterTest {
 
     }
 
-    @org.junit.Test
+    @Test
     public void sortStringsValidityTest3() {
         String[] arr = {"Hilbert", "Godel", "Poincare", "Ramanujan", "Pochhammmer"};
         String[] expectedArr = {"Godel", "Hilbert", "Poincare", "Pochhammmer", "Ramanujan"};
@@ -27,7 +29,7 @@ public class SorterTest {
     }
 
 
-    @org.junit.Test
+    @Test
     public void sortStringsStabilityTest() {
         // using the third character as a marker for relative position amongst duplicates since
         // problem description only sorts based on the first two characters
