@@ -62,9 +62,8 @@ class InversionCounter {
             right++;
         }
 
-        for (int k = 0; k < right2 - left1 + 1; k++) {
-            arr[left1 + k] = temp[k];
-        }
+        if (right2 - left1 + 1 >= 0)
+            System.arraycopy(temp, 0, arr, left1, right2 - left1 + 1);
         //System.out.println(Arrays.toString(temp));
 
         return count;
