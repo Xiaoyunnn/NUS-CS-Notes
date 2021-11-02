@@ -275,7 +275,6 @@ public class Solution {
 
     long query(long remainingEnergy) {
         // TODO: Implement your query operation here
-
         Quest maxQuestAvail = findPredecessor(new Quest((remainingEnergy + 1L), 0L));
 
         if (maxQuestAvail == null) {
@@ -283,23 +282,6 @@ public class Solution {
         } else {
             return query(maxQuestAvail, remainingEnergy, 0);
         }
-
-
-
-        //long totalReward = 0L;
-        /*
-        for(Quest maxNode = findPredecessor(new Quest(remainingEnergy + 1L, 0L));
-            maxNode != null && remainingEnergy >= maxNode.energy;
-            maxNode = findPredecessor(new Quest(remainingEnergy + 1L, 0L))) {
-
-            totalReward += maxNode.reward;
-            remainingEnergy -= maxNode.energy;
-            delete(maxNode.energy, maxNode.reward);
-        }*/
-
-
-        //return totalReward;
-
     }
 
     long query(Quest max, long remainingEnergy, long totalReward) {
@@ -311,10 +293,7 @@ public class Solution {
             delete(max.energy, max.reward);
             Quest maxQuestAvail = findPredecessor(new Quest((remainingEnergy + 1L), 0L));
             return query(maxQuestAvail, energyRemained, rewardAdded);
-
-
         }
-
     }
 
     public static void main(String[] args) {
@@ -334,5 +313,4 @@ public class Solution {
         ret = soln.query(1L);
         System.out.println(ret);
     }
-
 }
