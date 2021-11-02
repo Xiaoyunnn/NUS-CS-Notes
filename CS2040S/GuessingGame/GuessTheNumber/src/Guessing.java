@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Guessing {
 
     // Your local variables here
@@ -18,10 +16,10 @@ public class Guessing {
      */
     public void update(int answer) {
         int mid = this.low + (this.high - this.low) / 2;
-            if (answer < 0) {
-                this.low = mid + 1;
-            } else {
-                this.high = mid;
-            }
+        if (answer < 0) {
+            this.low = mid + 1;
+        } else {
+            this.high = mid;
+        }
     }
 }

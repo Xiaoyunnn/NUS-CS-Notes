@@ -1,12 +1,10 @@
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Random;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class GuessingTest {
-
-
+class GuessingTest {
     @Test
     public void guess() {
         Random r = new Random();
