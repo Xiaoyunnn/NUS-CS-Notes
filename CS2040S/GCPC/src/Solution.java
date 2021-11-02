@@ -10,11 +10,13 @@ public class Solution {
         int teamId;
         int numSolved;
         long numPenalty;
+
         public Team(int teamId, int numSolved, long numPenalty) {
             this.teamId = teamId;
             this.numSolved = numSolved;
             this.numPenalty = numPenalty;
         }
+
         @Override
         public int compareTo(Team o) {
             int compareSolved = Integer.compare(this.numSolved, o.numSolved);
@@ -30,6 +32,7 @@ public class Solution {
                 }
             }
         }
+
         @Override
         public String toString() {
             return "(" +
@@ -38,6 +41,7 @@ public class Solution {
                     ", " + numPenalty +
                     ')';
         }
+
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
@@ -45,6 +49,7 @@ public class Solution {
             Team team = (Team) o;
             return teamId == team.teamId && numSolved == team.numSolved && numPenalty == team.numPenalty;
         }
+
         @Override
         //        public int hashCode() {
         //            return Objects.hash(teamId, numSolved, numPenalty);
@@ -54,12 +59,14 @@ public class Solution {
             return (int) (hash ^ (hash >>> 32));
         }
     }
+
     public Solution(int numTeams) {
         // TODO: Construct/Initialise your data structures here
         this.solvedArr = new int[numTeams + 1];
         this.penaltyArr = new long[numTeams + 1];
         this.teamsGreater = new TreeSet<>();
     }
+
     public int update(int team, long newPenalty){
         // TODO: Implement your update function here
         int solved = this.solvedArr[team];
@@ -67,9 +74,10 @@ public class Solution {
         this.solvedArr[team]++;
         this.penaltyArr[team] += newPenalty;
         Team one = new Team(1, solvedArr[1], penaltyArr[1]);
+
         if (team != 1) {
             Team newTeam = new Team(team, this.solvedArr[team], this.penaltyArr[team]);
-            if (!teamsGreater.isEmpty() && (new Team(team, solved,penalty)).compareTo(one) > 0) {
+            if (!teamsGreater.isEmpty() && (new Team(team, solved, penalty)).compareTo(one) > 0) {
                 teamsGreater.remove(new Team(team,solved,penalty));
             }
             if (newTeam.compareTo(one) > 0) {
@@ -77,7 +85,6 @@ public class Solution {
             }
         } else {
             // update is with regard to team 1
-            int size = teamsGreater.size();
             while (!teamsGreater.isEmpty()) {
                 Team temp = teamsGreater.lower(one);
                 if (temp != null) {
