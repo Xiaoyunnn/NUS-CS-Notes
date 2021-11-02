@@ -1,8 +1,10 @@
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 public class SolutionTest {
 
-    @org.junit.Test
+    @Test
     public void update() {
         Solution soln = new Solution(3);
         assertEquals(2, soln.update(2, 7));
