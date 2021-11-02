@@ -69,32 +69,40 @@ public class Solution {
 
     public int update(int team, long newPenalty){
         // TODO: Implement your update function here
-        int solved = this.solvedArr[team];
-        long penalty = this.penaltyArr[team];
+        int prevNumSolved = this.solvedArr[team];
+        long prevPenalty = this.penaltyArr[team];
         this.solvedArr[team]++;
         this.penaltyArr[team] += newPenalty;
         Team one = new Team(1, solvedArr[1], penaltyArr[1]);
 
         if (team != 1) {
-            Team newTeam = new Team(team, this.solvedArr[team], this.penaltyArr[team]);
-            if (!teamsGreater.isEmpty() && (new Team(team, solved, penalty)).compareTo(one) > 0) {
-                teamsGreater.remove(new Team(team,solved,penalty));
+            Team teamNewScores = new Team(team, this.solvedArr[team], this.penaltyArr[team]);
+            Team teamPrevScores = new Team(team, prevNumSolved, prevPenalty);
+
+            // check if there are teams with better scores than team 1
+            // if the updating team already had a better score than team 1,
+            // remove old entry and insert new entry
+            if (!teamsGreater.isEmpty() && teamPrevScores.compareTo(one) > 0) {
+                teamsGreater.remove(teamPrevScores);
             }
-            if (newTeam.compareTo(one) > 0) {
-                teamsGreater.add(newTeam);
+
+            // insert the updating team into teams with better scores than team 1 into teamsGreater tree set
+            if (teamNewScores.compareTo(one) > 0) {
+                teamsGreater.add(teamNewScores);
             }
         } else {
             // update is with regard to team 1
             while (!teamsGreater.isEmpty()) {
                 Team temp = teamsGreater.lower(one);
                 if (temp != null) {
+                    // there exists teams with lower scores than team 1 after team 1 is being updated.
                     this.teamsGreater.remove(temp);
                 } else {
+                    // there no longer exists a team with lower scores than team 1.
                     break;
                 }
             }
         }
-        //        System.out.println("tree = "+teamsGreater.toString());
         return teamsGreater.size() + 1;
     }
 }
