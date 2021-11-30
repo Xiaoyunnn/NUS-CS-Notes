@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BellmanFord/BellmanFord.iml" filepath="$PROJECT_DIR$/BellmanFord/BellmanFord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS2040S.iml" filepath="$PROJECT_DIR$/CS2040S.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GCPC/GCPC.iml" filepath="$PROJECT_DIR$/GCPC/GCPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuessingGame/GuessingGame.iml" filepath="$PROJECT_DIR$/GuessingGame/GuessingGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InversionCounting/InversionCounting.iml" filepath="$PROJECT_DIR$/InversionCounting/InversionCounting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KattisQuest/KattisQuest.iml" filepath="$PROJECT_DIR$/KattisQuest/KattisQuest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MedianFinder/MedianFinder.iml" filepath="$PROJECT_DIR$/MedianFinder/MedianFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PS8/PS8.iml" filepath="$PROJECT_DIR$/PS8/PS8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortOfSorting/SortOfSorting.iml" filepath="$PROJECT_DIR$/SortOfSorting/SortOfSorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TwoSum/TwoSum.iml" filepath="$PROJECT_DIR$/TwoSum/TwoSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WiFi/WiFi.iml" filepath="$PROJECT_DIR$/WiFi/WiFi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/isolation/isolation.iml" filepath="$PROJECT_DIR$/isolation/isolation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps3/ps3.iml" filepath="$PROJECT_DIR$/ps3/ps3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps4/ps4.iml" filepath="$PROJECT_DIR$/ps4/ps4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps5/ps5.iml" filepath="$PROJECT_DIR$/ps5/ps5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps6/ps6.iml" filepath="$PROJECT_DIR$/ps6/ps6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps7_part3/ps7_part3.iml" filepath="$PROJECT_DIR$/ps7_part3/ps7_part3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps7p1/ps7p1.iml" filepath="$PROJECT_DIR$/ps7p1/ps7p1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ps7p2v2/ps7p2v2.iml" filepath="$PROJECT_DIR$/ps7p2v2/ps7p2v2.iml" />
+    </modules>
+  </component>
+</project>
